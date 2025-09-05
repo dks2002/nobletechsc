@@ -28,12 +28,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
   { className, variant = 'primary', size = 'md', asChild = false, children, ...props }, ref
 ) {
   const classes = clsx(buttonStyles({ variant, size }), className);
-  if (asChild && React.isValidElement(children)) {
-    return React.cloneElement(children as any, {
-      className: clsx(classes, (children as any).props?.className),
-      ref,
-      ...props
-    });
+  function isElementWithClassName(node: React.ReactNode): node is React.ReactElement<{ className?: string }> {
+    return React.isValidElement(node);
+  }
+  if (asChild && isElementWithClassName(children)) {
+    const original = children.props.className;
+    return React.cloneElement(children, { className: clsx(classes, original), ...props });
   }
   return <button ref={ref} className={classes} {...props}>{children}</button>;
 });
