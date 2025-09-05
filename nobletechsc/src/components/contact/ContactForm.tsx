@@ -14,6 +14,8 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
+// reCAPTCHA removed per request – rate limiter on server still active
+
 export function ContactForm() {
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormValues>({ resolver: zodResolver(schema) });
   const [status, setStatus] = useState<'idle'|'success'|'error'>('idle');
@@ -21,7 +23,7 @@ export function ContactForm() {
   const onSubmit = async (values: FormValues) => {
     setStatus('idle');
     try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
+  const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
       if (!res.ok) throw new Error('Failed');
       setStatus('success');
       reset();
@@ -29,6 +31,7 @@ export function ContactForm() {
       setStatus('error');
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-xl">
@@ -55,7 +58,7 @@ export function ContactForm() {
         </div>
       </div>
       <div className="flex items-center gap-4 flex-wrap">
-        <Button disabled={isSubmitting}>{isSubmitting ? 'Sending…' : 'Send Message'}</Button>
+  <Button disabled={isSubmitting}>{isSubmitting ? 'Sending…' : 'Send Message'}</Button>
         {status === 'success' && <span className="text-sm text-green-600">Message sent!</span>}
         {status === 'error' && <span className="text-sm text-red-600">Something went wrong.</span>}
       </div>
