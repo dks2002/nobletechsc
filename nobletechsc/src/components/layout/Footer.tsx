@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container-site py-12 grid gap-10 md:grid-cols-4">
         <div className="space-y-3 max-w-xs">
           <h3 className="font-semibold text-base">{COMPANY.name}</h3>
-          <p className="text-[--color-text-subtle] text-sm leading-relaxed">Founded in {COMPANY.founded}, we build modern web, mobile, and software solutions enabling digital transformation.</p>
+          <p className="text-[--color-text-subtle] text-sm leading-relaxed">We build modern web, mobile, and software solutions enabling digital transformation.</p>
           <p className="text-[--color-text-subtle] text-xs">© {new Date().getFullYear()} {COMPANY.shortName}. All rights reserved.</p>
         </div>
         <div>

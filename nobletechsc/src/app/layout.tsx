@@ -69,7 +69,7 @@ export default function RootLayout({
               name: COMPANY.name,
               url: META.url,
               logo: `${META.url.replace(/\/$/, '')}/ntsc_logo.png`,
-              foundingDate: COMPANY.founded,
+              // foundingDate intentionally omitted per preference
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Accra',

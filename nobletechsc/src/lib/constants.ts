@@ -1,7 +1,6 @@
 export const COMPANY = {
   name: 'Noble Technology Solution Center',
   shortName: 'Noble Tech',
-  founded: '2022',
   location: 'Accra, Ghana',
   phone: '0246550832',
   email: 'ndsolutionsgh@gmail.com',
@@ -67,6 +66,7 @@ export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
+  { href: '/startups', label: 'Startups' },
   { href: '/contact', label: 'Contact' },
 ];
 

@@ -16,10 +16,10 @@ export default function AboutPage() {
             <span className="eyebrow">About Us</span>
           </AnimatedReveal>
           <AnimatedReveal index={1}>
-            <h1 className="text-4xl font-bold leading-tight mb-4">Building impactful technology since {COMPANY.founded}</h1>
+            <h1 className="text-4xl font-bold leading-tight mb-4">Building impactful technology for Africa and beyond</h1>
           </AnimatedReveal>
           <AnimatedReveal index={2}>
-            <p className="text-lg text-[--color-text-soft] leading-relaxed">Founded in 2022 in Accra, Ghana, {COMPANY.name} was established with a passion for innovation and a commitment to helping businesses and institutions thrive in the digital age. From humble beginnings, we have grown into a trusted partner for organizations seeking modern, reliable, and scalable technology solutions.</p>
+            <p className="text-lg text-[--color-text-soft] leading-relaxed">Based in Accra, Ghana, {COMPANY.name} was established with a passion for innovation and a commitment to helping businesses and institutions thrive in the digital age. We’ve grown into a trusted partner for organizations seeking modern, reliable, and scalable technology solutions.</p>
           </AnimatedReveal>
           <AnimatedReveal index={3}>
             <p className="text-[--color-text-soft] leading-relaxed">We specialize in building web applications, mobile apps (iOS & Android), software systems, and websites tailored to meet the unique needs of our clients. Our focus is on delivering cutting-edge solutions that are functional, user-friendly, secure, and future-ready.</p>
