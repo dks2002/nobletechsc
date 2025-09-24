@@ -25,7 +25,7 @@ function Card({ title, bullets, badge, cta }: { title: string; bullets: string[]
 
 export default function StartupsPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-[calc(var(--nav-height)+0.5rem)] md:pt-[var(--nav-height)]">
       {/* Hero */}
       <section className="section py-20">
         <div className="container-site grid gap-8 lg:grid-cols-2 items-center">
