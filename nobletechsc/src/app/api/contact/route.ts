@@ -1,4 +1,3 @@
-// src/app/api/contact/route.ts
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
